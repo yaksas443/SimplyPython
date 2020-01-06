@@ -11,6 +11,7 @@ def detect_overflow(dbg):
 		return DBG_EXCEPTION_NOT_HANDLED
 		
 	print "Access Violation Happened"
+	print "EIP : %0x"%dbg.context.Eip
 
 dbg = pydbg()
 dbg.attach(int(sys.argv[1]))
